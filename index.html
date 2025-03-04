@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Gradient Header</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+
+        body {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        header {
+            background: linear-gradient(135deg, #ff1493, #6a0dad); /* Hot Pink to Purple */
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            font-size: 32px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Optional: Add a subtle glow effect */
+        header::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -50%;
+            width: 200%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(255,255,255,0.2) 10%, transparent 50%);
+            animation: shine 3s infinite linear;
+        }
+
+        @keyframes shine {
+            0% { transform: translateX(-50%); }
+            100% { transform: translateX(50%); }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Modern Gradient Header
+    </header>
+</body>
+</html>
+
