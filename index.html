@@ -1,52 +1,160 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
+  <head>
+    <title>WWW.Bratzbxrbie.com</title>
+  </head>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modern Gradient Header</title>
+    <title>Bratzbxrbie - Sweet Heaven on Earth</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
-
         body {
+            font-family: Arial, sans-serif;
             margin: 0;
-            font-family: 'Montserrat', sans-serif;
-        }
-
-        header {
-            background: linear-gradient(135deg, #ff1493, #6a0dad); /* Hot Pink to Purple */
-            color: white;
-            padding: 40px 20px;
+            padding: 0;
+            background: linear-gradient(to bottom, #fddde6, #cfe2f3, #f5e6cc);
             text-align: center;
-            font-size: 32px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-            position: relative;
-            overflow: hidden;
+            overflow-x: hidden;
         }
-
-        /* Optional: Add a subtle glow effect */
-        header::after {
-            content: "";
-            position: absolute;
+        .navbar {
+            background: rgba(255, 192, 203, 0.8);
+            padding: 15px;
+            position: fixed;
+            width: 100%;
             top: 0;
-            left: -50%;
-            width: 200%;
-            height: 100%;
-            background: radial-gradient(circle, rgba(255,255,255,0.2) 10%, transparent 50%);
-            animation: shine 3s infinite linear;
+            left: 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 50px;
         }
-
-        @keyframes shine {
-            0% { transform: translateX(-50%); }
-            100% { transform: translateX(50%); }
+        .logo {
+            height: 50px;
+            cursor: pointer;
+        }
+        .navbar a {
+            text-decoration: none;
+            color: #5c3d2e;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+        .navbar a:hover {
+            background: #e6b3cc;
+        }
+        .hero {
+            padding: 100px 20px;
+            background: url('background-image.jpg') no-repeat center center/cover;
+            color: #fff;
+            opacity: 0;
+            transform: translateY(50px);
+            animation: fadeInUp 1s forwards;
+        }
+        .section {
+            padding: 50px 20px;
+            opacity: 0;
+            transform: translateY(50px);
+            animation: fadeInUp 1s forwards;
+            animation-delay: 0.5s;
+        }
+        .gallery {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .gallery img {
+            width: 200px;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+        .gallery img:hover {
+            transform: scale(1.1);
+        }
+        .button {
+            display: inline-block;
+            padding: 15px 30px;
+            background: #ffb6c1;
+            color: white;
+            text-decoration: none;
+            border-radius: 20px;
+            transition: 0.3s;
+        }
+        .button:hover {
+            background: #ff85a2;
+        }
+        footer {
+            background: #f5e6cc;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
     </style>
 </head>
 <body>
-    <header>
-        Modern Gradient Header
-    </header>
+    <div class="navbar">
+        <a href="#home"><img src="logo.png" alt="Bratzbxrbie Logo" class="logo"></a>
+        <div>
+            <a href="#home">Home</a>
+            <a href="#products">Products</a>
+            <a href="#prices">Prices</a>
+            <a href="#about">About Us</a>
+            <a href="#contact">Contact Us</a>
+            <a href="#order">Order</a>
+        </div>
+    </div>
+    
+    <div class="hero" id="home">
+        <h1>Welcome to Bratzbxrbie</h1>
+        <p>Your one-stop shop for the sweetest delights</p>
+        <a href="#order" class="button">Order Now</a>
+    </div>
+
+    <div class="section" id="products">
+        <h2>Our Sweet Delights</h2>
+        <p>Discover our range of themed lolli cakes and more!</p>
+        <div class="gallery">
+            <img src="pic1.jpg" alt="Sweet Treat 1">
+            <img src="pic2.jpg" alt="Sweet Treat 2">
+            <img src="pic3.jpg" alt="Sweet Treat 3">
+            <img src="pic4.jpg" alt="Sweet Treat 4">
+            <img src="pic5.jpg" alt="Sweet Treat 5">
+        </div>
+    </div>
+
+    <div class="section" id="prices">
+        <h2>Our Prices</h2>
+        <p>Affordable treats for every sweet tooth!</p>
+    </div>
+
+    <div class="section" id="about">
+        <h2>About Us</h2>
+        <p>Bringing happiness through sweet creations.</p>
+    </div>
+
+    <div class="section" id="contact">
+        <h2>Contact Us</h2>
+        <p>Get in touch for custom orders and inquiries.</p>
+    </div>
+
+    <div class="section" id="order">
+        <h2>Place an Order</h2>
+        <p>Order your favorite treats online.</p>
+        <a href="#" class="button">Order Now</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Bratzbxrbie. All Rights Reserved.</p>
+    </footer>
 </body>
 </html>
-
